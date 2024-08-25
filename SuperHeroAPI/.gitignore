@@ -1,0 +1,100 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# VS 2022 artifact folders
+.vs/
+.vscode/
+.vscode/*
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.swp
+*.rsuser
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code extensions folder
+.vscode/extensions.json
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Rider files
+.idea/
+.idea_modules/
+*.sln.iml
+
+# Local History for JetBrains IDEs
+.localhistory/
+
+# DotNet CLI files
+**/project.lock.json
+**/project.fragment.lock.json
+**/artifacts/
+
+# NuGet Packages
+*.nupkg
+# Uncomment if you have production NuGet packages that you want to store in source control
+# !MyProductionPackage*.nupkg
+*.snupkg
+
+# Entity Framework Core Migrations
+# The Migrations folder should be included to ensure database schema consistency.
+# However, you can uncomment the following line if you want to exclude migrations for any reason:
+#!Migrations/
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+*.log
+*.log.xml
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Publish output
+publish/
+publishprofiles/
+
+# .NET Runtime-generated files (e.g., runtimeconfig, deps.json)
+*.runtimeconfig.json
+*.deps.json
+*.runtimeconfig.dev.json
+
+# Environment variables
+.env
+
+# Azure Web Apps publish settings
+PublishProfiles/
+
+# Resharper settings
+_ReSharper*/
