@@ -43,11 +43,46 @@ namespace SuperHeroAPI.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult<List<SuperHero>>> AddHero (SuperHero superhero)
+        public async Task<ActionResult<List<SuperHero>>> AddHero(SuperHero superhero)
         {
             _context.SuperHeroes.Add(superhero);
             await _context.SaveChangesAsync();
             return Ok();
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<List<SuperHero>>> UpdateHero(SuperHero superhero)
+        {
+            var hero = await _context.SuperHeroes.FindAsync(superhero.Id);
+
+            if (hero is null)
+                return NotFound("Hero not found!");
+
+            hero.Name = superhero.Name;
+            hero.FirstName = superhero.FirstName;
+            hero.LastName = superhero.LastName;
+            hero.Place = superhero.Place;
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<List<SuperHero>>> DeletHero(int id)
+        {
+
+            var hero = await _context.SuperHeroes.FindAsync(id);
+
+            if (hero is null)
+                return NotFound("Hero not found!");
+
+            _context.SuperHeroes.Remove(hero);
+
+            await _context.SaveChangesAsync();
+            return Ok("Hero deleted");
+
         }
     }
 }
